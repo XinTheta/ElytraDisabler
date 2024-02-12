@@ -1,6 +1,7 @@
 package dev.xin.elytradisabler;
 
 import dev.xin.elytradisabler.Commands.ReloadCommand;
+import dev.xin.elytradisabler.Debug.MemoryMonitor;
 import dev.xin.elytradisabler.Listeners.ElytraPickupListener;
 import dev.xin.elytradisabler.Listeners.ElytraWearListener;
 import dev.xin.elytradisabler.Listeners.GlideListeners;
@@ -20,6 +21,7 @@ import java.io.IOException;
 public final class ElytraDisabler extends JavaPlugin {
 
     public static YamlDocument config;
+    private MemoryMonitor memoryMonitor;
 
     @Override
     public void onEnable() {
@@ -40,6 +42,14 @@ public final class ElytraDisabler extends JavaPlugin {
 
         // Register commands
         getCommand("elytradisabler").setExecutor(new ReloadCommand());
+
+
+        // Only for debug
+        // Will be removed on release
+
+        memoryMonitor = new MemoryMonitor(this);
+        memoryMonitor.startMonitoring(20 * 60 * 5); // Check memory usage every 5 minutes (adjust as needed)
+
 
         getLogger().info("Listeners and Commands have been loaded!");
 
