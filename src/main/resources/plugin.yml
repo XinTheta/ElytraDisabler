@@ -1,5 +1,5 @@
 name: ElytraDisabler
-version: 0.0.1
+version: 0.0.1-BETA
 main: dev.xin.elytradisabler.ElytraDisabler
 api-version: '1.17'
 author: Xintheta
