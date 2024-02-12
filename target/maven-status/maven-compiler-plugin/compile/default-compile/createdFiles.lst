@@ -3,4 +3,5 @@ dev\xin\elytradisabler\ElytraDisabler.class
 dev\xin\elytradisabler\Commands\ReloadCommand.class
 dev\xin\elytradisabler\Listeners\DispencerListener.class
 dev\xin\elytradisabler\Listeners\ElytraPickupListener.class
+dev\xin\elytradisabler\Debug\MemoryMonitor.class
 dev\xin\elytradisabler\Listeners\GlideListeners.class
