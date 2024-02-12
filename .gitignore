@@ -1,0 +1,11 @@
+
+# Ignore the target folder
+/target/
+
+# Ignore .idea folder
+.idea/
+
+# Ignore Files
+ElytraDisabler.iml
+
+dependency-reduced-pom.xml
