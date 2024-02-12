@@ -1,18 +1,18 @@
 package dev.xin.elytradisabler;
 
-import dev.xin.elytradisabler.Commands.ReloadCommand;
-import dev.xin.elytradisabler.Debug.MemoryMonitor;
-import dev.xin.elytradisabler.Listeners.ElytraPickupListener;
-import dev.xin.elytradisabler.Listeners.ElytraWearListener;
-import dev.xin.elytradisabler.Listeners.GlideListeners;
-import org.bukkit.plugin.java.JavaPlugin;
-
 import dev.dejvokep.boostedyaml.YamlDocument;
 import dev.dejvokep.boostedyaml.dvs.versioning.BasicVersioning;
 import dev.dejvokep.boostedyaml.settings.dumper.DumperSettings;
 import dev.dejvokep.boostedyaml.settings.general.GeneralSettings;
 import dev.dejvokep.boostedyaml.settings.loader.LoaderSettings;
 import dev.dejvokep.boostedyaml.settings.updater.UpdaterSettings;
+import dev.xin.elytradisabler.Commands.ReloadCommand;
+import dev.xin.elytradisabler.Debug.MemoryMonitor;
+import dev.xin.elytradisabler.Listeners.DispencerListener;
+import dev.xin.elytradisabler.Listeners.ElytraPickupListener;
+import dev.xin.elytradisabler.Listeners.ElytraWearListener;
+import dev.xin.elytradisabler.Listeners.GlideListeners;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,6 +39,7 @@ public final class ElytraDisabler extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ElytraPickupListener(), this);
         getServer().getPluginManager().registerEvents(new GlideListeners(), this);
         getServer().getPluginManager().registerEvents(new ElytraWearListener(), this);
+        getServer().getPluginManager().registerEvents(new DispencerListener(), this);
 
         // Register commands
         getCommand("elytradisabler").setExecutor(new ReloadCommand());
