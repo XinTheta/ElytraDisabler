@@ -26,6 +26,7 @@ public class ReloadCommand implements CommandExecutor {
                 }
 
             } catch (IOException e) {
+                sender.sendMessage("Issue while saving the config, create a issue with the following stacktrace");
                 throw new RuntimeException(e);
             }
         }
