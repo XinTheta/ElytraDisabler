@@ -1,0 +1,11 @@
+name: ElytraDisabler
+version: '${project.version}'
+main: dev.xin.elytradisabler.ElytraDisabler
+api-version: '1.17'
+author: Xintheta
+description: A customizable elytra disabler plugin
+commands:
+  elytradisabler:
+    description: Reload the ElytraDisabler plugin
+    permission: op
+    permission-message: You don't have the required permissions.
